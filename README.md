@@ -15,8 +15,8 @@
 
 ---
 
-- Execute `vagrant up --provision` to start the three VMs
-- Login to the `kerberos-server`, change to `root` user by `sudo su` command and initialize the Kerberos Database (the `-s` flag creates a `stash` file to avoid entering the DB password upon restart) :
+- Execute `vagrant up --provision` to start the three VMs.
+- Login to the `kerberos-server`, change to `root` user by `sudo su` command and initialize the Kerberos Database (the `-s` flag creates a `stash` file to avoid entering the DB password upon restart):
     
     ```
     root@kerberos-server:/home/vagrant#/usr/sbin/kdb5_util create -s
@@ -313,7 +313,7 @@ Each service or host should have a record (Kerberos principal) in the KDC DB in 
     drwxr-xr-x 3 ubuntu  ubuntu     4096 Nov  1 16:38 ubuntu
     drwxr-xr-x 5 vagrant vagrant    4096 Nov  1 19:46 vagrant
     ```
-    If issues are encoutered during the mount, make dure that execute `systemctl restart rpc-gssd && systemctl restart rpc-svcgssd`
+    If issues are encoutered during the mount, make sure that execute `systemctl restart rpc-gssd && systemctl restart rpc-svcgssd`
 ---
 
 ### Useful links and articles used in this project:
